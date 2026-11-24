@@ -1,3 +1,7 @@
+// One Word for the Boss — entry: "Decorative" (10 characters, no trailing newline).
+// Writes the entry word to entry.txt in the resolved output directory.
+// Output-dir resolution order: argv[2] > $MAKEFUN_OUTPUT_DIR > /output,
+// falling back to ./output when the primary directory is not writable.
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
